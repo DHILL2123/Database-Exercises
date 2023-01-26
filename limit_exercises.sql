@@ -18,14 +18,15 @@ List the first 10 distinct last name sorted in descending order.
 'Zongker'
 
 Find all previous or current employees hired in the 90s and born on Christmas. 
--362
 Find the first 5 employees hired in the 90's by sorting by hire date and limiting your results to 
 the first 5 records. Write a comment in your code that lists the five names of the employees returned.
-'1990-01-01','1953-01-24','Aiman','Hainaut'
-'1990-01-01','1964-10-24','Lillian','Stiles'
-'1990-01-01','1953-02-25','Teruyuki','Sridhar'
-'1990-01-01','1961-03-05','Sashi','Demeyer'
-'1990-01-01','1961-01-08','Tomofumi','Rattan'
+
+362
+'1993-10-20','1959-12-25','Mang','Erie'
+'1990-01-19','1961-12-25','Evgueni','Srimani'
+'1992-10-25','1964-12-25','Florina','Garnier'
+'1992-01-10','1962-12-25','Sorina','Kermarrec'
+'1992-07-11','1955-12-25','Chriss','Binding'
 
 Try to think of your results as batches, sets, or pages. The first five results are your 
 first page. The five after that would be your second page, etc. Update the query to find the tenth page of results.
@@ -45,16 +46,18 @@ corrisponds to the set limit/offset. limit 5(page 1) offset 1(page 2)
 use employees;
 describe employees;
 
-/*SELECT
-hire_date, birth_date
+select
+hire_date, birth_date, first_name, last_name
 FROM employees
-WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31';*/
+WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
+AND birth_date like '%-12-25'
+limit 5;
 
   
 
-Select 
+/*Select 
 hire_date, birth_date, first_name, last_name
 from employees
 where hire_date between '1990-01-01' and '1999-12-31' 
 Order by hire_date asc
-limit 5 Offset 45;
+limit 5 Offset 45;*/
