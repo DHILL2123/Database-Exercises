@@ -55,12 +55,12 @@ and the name of the youngest employee who was hired first.
 
 */
 
-/*Select first_name, last_name
+Select first_name, last_name
 from employees
 where first_name = 'Irena' OR
 first_name =  'Vidya'OR 
 first_name = 'Maya'
-Order by first_name;*/
+Order by first_name;
 
 /*describe employees;
 select * from employees
